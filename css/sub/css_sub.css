@@ -1,0 +1,378 @@
+/* 
+body,html{
+  height: 100%;
+  color: #a4a6b8;
+}
+
+.wrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  box-sizing: border-box;
+
+}
+section>article:not(:nth-of-type(1)){
+  display: none;
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+}
+  header ul{
+    width: 100%;
+    height: 100%;
+  }/*공통부분*/
+  header ul>li{
+    width: 100%;
+    height: 100%;
+    /* background-color: cornsilk; */
+  }
+
+  /* ---------------공통부분 */
+
+  /* --------header>.menu .menu -- */
+    .menu{
+      width: 150px;
+      height: 70px;
+      background-color: aqua;
+      position: relative;
+    }
+      .menu>.sub1 h1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 100px;
+      }
+        .menu>.sub1 h1 a{
+          width: 100%;
+        }
+          .menu>.sub1 h1 a img{
+            width: 100%;
+          }
+
+
+
+      .sub2{
+        /* display: none;  .menu 클릭시 등장 */
+      }
+/* --------header>.menu end ---------------- */
+
+
+
+
+
+      
+/* --------header>nav start -- */
+
+
+    nav{
+      width: 100%;
+      height: 70px;
+    }
+      nav>.navi{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+        .navi>li{
+          width: 50%;
+          line-height: 35px;
+          text-align: center;
+          padding: 5px;
+          box-sizing: border-box;
+        }
+        .navi>li{
+          color: #a4a6b8;
+          position: relative;
+        }
+          .navi>li>a{
+            color: #a4a6b8;
+          }
+        .navi>li:hover::before{
+          transform:scaleX(1);
+          transform-origin: bottom left;
+          transition: transform .3s ease;
+        }
+        .navi>li::before{
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border-bottom: 3px solid #724f4f;
+          transform:scaleX(0);
+          transition: transform 1s ease;
+          transform-origin: bottom right;
+        }
+/* --------header>nav end ---------------- */
+
+
+
+
+
+
+/* --------.box1 start-- */
+    .box1{
+      display: flex;
+    }
+
+    .box1_info>img{
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .box1_info>ul{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+      .box1_info>ul p{
+        font-size: 0.8em;        
+      }.box1_info>ul h1{
+        font-size: 3em;        
+      }
+    .right_option{
+      position: absolute;
+      top: 15%;
+      right:  0%;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
+    .right_option>div{
+      margin-top: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 20%;
+    }
+    .right_option>.box1_effect{
+      color: #ffffff;
+    }
+
+      .box_con{
+    width: 70%;
+    height: 90%;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    
+  }
+    .box_con>.box2_info{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      transition: 1s;
+      
+
+    }
+    .box_con .son_effect{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.5s;
+    }
+  .right_option{
+    width: 30%;
+    height: 65%;
+  }
+
+
+
+      
+/* --------.box1 end---------------- */
+
+
+
+
+/* --------.box2 start-- */
+.box2{
+  display: flex;
+}
+
+.box2_info>img{
+  display: block;
+  padding: 50px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.box2_info>ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+  .box2_info>ul p{
+    font-size: 0.8em;        
+  }.box2_info>ul h1{
+    font-size: 3em;        
+  }
+.right_option{
+  position: absolute;
+  top: 15%;
+  right:  0%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.right_option>div{
+  margin-top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 20%;
+}
+.right_option>.box1_effect{
+  color: #ffffff;
+}
+
+  .box_con{
+width: 70%;
+height: 90%;
+padding: 50px;
+box-sizing: border-box;
+position: relative;
+
+}
+.box_con>.box1_info{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s;
+  
+
+}
+.box_con .son_effect{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.right_option{
+width: 30%;
+height: 65%;
+}
+
+
+/* --------.box1 end---------------- */
+
+/* --------.box1 start-- */
+
+/* --------.box1 end---------------- */
+
+/* --------.box1 start-- */
+
+/* --------.box1 end---------------- */
+
+
+/* --------.box1 start-- */
+
+/* --------.box1 end---------------- */
+
+/* --------.box1 start-- */
+
+/* --------.box1 end---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+.box6{
+  height: 200%;
+}
+
+/* --------.total_price start-- */
+.total_price{
+  width: 28%;
+  height: 20%;
+  /* background-color: brown; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+  .total_price>.total_top{
+    width: 100%;
+    height: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    line-height: 50px;
+
+  }
+    .total_top>span:nth-of-type(1){
+    margin-left: 5%;
+    font-size: 2.5em;
+    line-height: 50px;
+    }
+.total_bottom{
+  width: 100%;
+  height: 50%;
+  display: flex;
+
+}
+  .total_bottom>div{
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    line-height: 70px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+  }
+  .total_bottom>div:hover{
+    background-color: #ffffff;
+    transition: .5s;
+  }
+  .total_bottom>div:nth-of-type(2){
+    margin-left: 10px;
+    background-color: #724f4f;
+  }
+  .total_bottom>div:nth-of-type(2):hover{
+    background-color: #ffffff;
+    transition: .5s;
+  } */
+
+    
+
+/* --------.total_price end---------------- */
+
+

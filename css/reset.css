@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+
+a:link{
+  color: #000000;
+}
+a:visited{
+  color: #a83c3c;
+}
+a:active{
+  color: #bb8630;
+}
+a:hover{
+  color: #a83c3c;
+}
+
+
+a{
+  text-decoration: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>countDown</title>
+  <style>
+    .num_animation{
+      width: 100px;
+      padding: 20px;
+      font-size: 3em;
+      margin: 0 auto;
+      border: 1px solid ;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="num_animation" data-rate="5000">0</div>
+  <div class="num_animation" data-rate="60">0</div>
+  <div class="num_animation" data-rate="40">0</div>
+  <script>
+    var numAnimation = document.querySelectorAll('.num_animation');
+    var num = 0;
+    // var timer = setInterval(할일,시간);
+
+    // var timer = setInterval(function(){
+    //   ++num;
+    //   numAnimation.innerHTML=num;
+    //   if(num == 90){
+    //     clearInterval(timer);
+    //   }
+    // },10);
+
+    function changeNum(idx){
+      var num = 0;
+      var num_data = numAnimation[idx].getAttribute('data-rate');
+      var intervalTime = 100;
+
+      if(num_data>500){
+          intervalTime=0.01;
+      } //값이 크면 속도를 빠르게함
+
+      var timer = setInterval(function(){
+        ++num;
+        numAnimation[idx].innerHTML = num;
+        if(num == num_data){
+          clearInterval(timer);
+        }
+
+      },intervalTime)
+    }
+
+    for(var i=0; i<numAnimation.length;i++){
+      changeNum(i);
+    }
+
+  </script>
+</body>
+</html>

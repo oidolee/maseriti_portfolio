@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maserati</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--jQuery-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <!--google font-->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/scss.css"> -->
+    <link rel="stylesheet" href="css/respons.css">
+    <script src="js/script.js"></script>
+    <script src="js/bxslider.js"></script>
+</head>
+<body>
+        <header>
+            <h1 >
+                <a href="sub.html" id="logo" class="logo">
+                    <img src="img/main/header/logo.png" alt="logo">
+                </a>
+            </h1>
+            <nav>
+                <ul id="menu" class="menu">
+                    <li><a href=""> Models</a>
+                        <ul class="sub">
+                            <li><a href="">Ghibli</li></a>
+                            <li><a href="">Levante</li></a>
+                            <li><a href="">Quattroporte</li></a>
+                            <li><a href="">MC20</li></a>
+                        </ul>
+                    </li>
+                    <li><a href=""> Find & Buy</a>
+                        <ul class="sub">
+                            <li><a href="">딜러찾기</li></a>
+                            <li><a href="">매장찾기</li></a>
+                            <li><a href="">시승신청</li></a>
+                        </ul>
+                    </li>
+                    <li><a href=""> Services</a>
+                        <ul class="sub">
+                            <li><a href="">구매 유지 프로그램</li></a>
+                            <li><a href="">연장 보증</li></a>
+                            <li><a href="">마세라티 고객 지원</li></a>
+                        </ul>
+                    </li>
+                    <li><a href=""> AfterSales</a>
+                        <ul class="sub">
+                            <li><a href="">차량 사용자설명서</li></a>
+                            <li><a href="">블루투스</li></a>
+                            <li><a href="">클래식 차량 서비스</li></a>
+                        </ul>
+                    </li>
+
+                    <li><a href=""> Magazine</a>
+                        <ul class="sub">
+                            <li><a href="">Our Story</li></a>
+                            <li><a href="">Our World</li></a>
+                            <li><a href="">Our Partners</li></a>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <p><i class="fas fa-bars"></i></p><!--모바일 사이즈 480px 시  햄버거 메뉴 구현-->
+        </header>
+        <div class="header_bg"></div><!--header 스크롤 시 검은 배경 구현-->
+        <div id="tab_menu" class="tab_menu">
+            <ul>
+                <li><a href="index.html"></a></li>
+            </ul>
+        </div>
+        <div class="box box1">
+            <ul id="slider_box" class="slider_box">
+                <li class="slide sli_1">
+                    <p>Ghibli <span> | 2021 Ghibli</span></p>
+                </li>
+                <li class="slide sli_2">
+                    <p>Quattroporte <span> | Find New Load</span></p>
+                </li>
+                <li class="slide sli_3">
+                    <p>Mc20 <span> | Zero is Nothing</span></p>
+                </li>
+            </ul>
+            <ul class="check_box">
+                <li class="check_slide checkEffect"><a href="#"></a></li>
+                <li class="check_slide"><a href="#"></a></li>
+                <li class="check_slide"><a href="#"></a></li>
+            </ul>
+            <div id="move_arrow" class="move_arrow">
+                <a href="#box2"><img src="img/main/slider/mouse_move.png" alt="mouse_move"></a>
+            </div>
+            <div id="controlBox" class="controlBox">
+                <div id="play" class="play sliderControl">
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div id="pause" class="pause sliderControl">
+                    <i class="far fa-stop-circle"></i>
+                </div>
+            </div>
+            <div id="prev" class="moveArrow prev">
+               &lt;
+            </div>
+            <div id="next" class="moveArrow next">
+               &gt
+            </div>
+        </div>
+
+        <div id="box2" class="box box2">
+            <div id="box2_top" class="box2_top">
+                <h1>Maserati versions</h1>
+                <h5>마세라티가 제공하는 다양한 차량을 만나보세요.</h5>
+            </div>
+            <div id="box2_bottom" class="box2_bottom">
+                <div id="version_left" class="version_left">
+                    <h3>SELECT VERSION</h3>
+                    <span id="version_prev" class="version_prev"><i class="fas fa-chevron-up"></i></span>
+                    <ul id="select_box" class="select_box">
+                        <li data-version="0" class="version_effect">Levante</li>
+                        <li data-version="1" >Levante-s</li>
+                        <li data-version="2">Quattroporte</li>
+                        <li data-version="3">Quattroporte-trofeo</li>
+                    </ul>
+                    <span id="version_next" class="version_next"><i class="fas fa-chevron-down"></i></span>
+                </div>          
+                <div id="version_right" class="version_right">
+                    <ul id="version_box" class="version_box">
+                    </ul>
+                </div>          
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="box3_top">
+                <p>Maserati Models</p>
+                <p>Find New Load With Maserati </p>
+            </div>
+            <div class="box3_bottom">
+                <div class="slideWrap"><!--bxslider 구현-->
+                    <ul class="controls_slider">
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/Model_ghibli.png" alt="Model_ghibli">
+                                <p class="box3_p_effect">Ghibli</p>
+                                <div class="box_info">Ghibli's Origin</div>
+                            </a>
+                        </li>
+                       <li>
+                            <a href="#">
+                                <img src="img/main/box3/Model_levante.png" alt="Model_levante">
+                                <p class="box3_p_effect">Levante</p>
+                                <div class="box_info">Maserati of SUV</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/Model_MC20.png" alt="Model_MC20">
+                                <p class="box3_p_effect">Quattroporte</p>
+                                <div class="box_info">ICON OF ITALIAN ELEGANCE</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/Model_quattroporte.png" alt="Model_quattroporte">
+                                <p class="box3_p_effect">MC20</p>
+                                <div class="box_info">One OF KIND</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/ghibli_q4.png" alt="ghibli_q4">
+                                <p class="box3_p_effect">Ghibli</p>
+                                <div class="box_info">Ghibli_q4</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/ghibli_diesel.png" alt="ghibli_diesel">
+                                <p class="box3_p_effect">Ghibli</p>
+                                <div class="box_info">Ghibli_diesel</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/levante_gts.png" alt="levante_gts">
+                                <p class="box3_p_effect">Levante</p>
+                                <div class="box_info">Levante_gts</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/box3/levante_dissel.png" alt="levante_dissel">
+                                <p class="box3_p_effect">levante</p>
+                                <div class="box_info">levante_dissel</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="box4_top">
+                <p>instagram</p>
+                <h1>Experience Maserati</h1>
+            </div>
+            <div class="box4_bottom">
+                <a href=""></a>
+                <div class="box4_box  box4_list1">
+                    <div class="box4_box_bg"></div>
+                    <div class="box4_iconbox">
+                        <div class="box4_icon1">
+                            <img src="img/main/box4/heart.png" alt="heart">
+                            <span>1234</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box4_box box4_list2">
+                    <div class="box4_box_bg"></div>
+                    <div class="box4_iconbox">
+                        <div class="box4_icon2">
+                            <img src="img/main/box4/heart.png" alt="heart">
+                            <span>3784</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box4_box box4_list3">
+                    <div class="box4_box_bg"></div>
+                    <div class="box4_iconbox">
+                        <div class="box4_icon3">
+                            <img src="img/main/box4/heart.png" alt="heart">
+                            <span>2234</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="box5" class="box box5">
+            <div id="box5_box" class="box5_box">
+                <iframe src="https://spinzam.com/shot/embed/?idx=288786" ></iframe>
+            </div>
+            <div id="box5_info" class="box5_info">
+                <h1>Ghibli GranLusso</h1>
+                <p>기블리는 그란루소(GranLusso) 및 그란스포트(GranSport) 트림으로 고객의 감각과 취향을 온전히 만족시키는 옵션을 제공합니다. <br> <br>
+                    고객의 선택이나 열망이 무엇이든, 기블리는 언제나 기발하고 인상적인 방식으로 고객의 니즈를 채워줍니다.</p>
+            </div>
+        </div>
+        
+        <div id="box6" class="box box6">
+            <div class="box6_top">
+                <h1>About Maserati</h1>
+            </div>
+            <div class="box6_bottom">
+                <div class="box6_standard box6_effet">
+                    <div class="box6_list box6_list1">
+                        <div class="box6_imgbox">
+                            <img src="img/main/box6/box6_1.jpg" alt="box6_1">
+                            <h2><a href="sub.html"> Summer Festival</a></h2>
+                        </div>
+                        <h3>Summer Festival</h3>
+                        <h5>마세라티가 준비한 특별한 여름 페스티벌 혜택</h5>
+                        <p>
+                            <span> <a href="#"> More </a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="box6_standard box6_effet">
+                    <div class="box6_list box6_list2">
+                        <div class="box6_imgbox">
+                            <img src="img/main/box6/box6_2.jpg" alt="box6_2">
+                            <h2><a href="sub.html"></a> David Beckham!</a></h2>
+                        </div>
+                        <h3>David Beckham!</h3>
+                        <h5>
+                            베컴과 함께 하는 마세라티 이벤트 지금 만나보세요
+                        </h5>
+                        <p>
+                            <span> <a href="#"> More </a></span>
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+                <div class="box6_standard box6_effet">
+                    <div class="box6_list box6_list3">
+                        <div class="box6_imgbox">
+                            <img src="img/main/box6/box6_3.jpg" alt="box6_3">
+                            <h2><a href="sub.html"> Family Owners</a></h2>
+                        </div>
+                        <h3>Family Owners</h3>
+                        <h5>Family Owners 가족과 함께하는 마세라티 이벤트</h5>
+                        <p>
+                            <span> <a href="#"> More </a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="box7" class="box box7">
+            <ul>
+                <li id="box7_1" class="box7_1"></li>
+                <li id="box7_2" class="box7_2 disappear"></li>
+            </ul>
+            <div id="start_engine" class="start_engine">
+                <img src="img/main/box7/start_engine.png" alt="start_engine">
+                <img src="img/main/box7/start_engine_red.png" alt="start_engine_red" class="start_engine_red disappear">
+            </div>
+            <div id="finger" class="finger">
+                <img src="img/main/box7/finger.png" alt="finger">
+            </div>
+            <p class="box7_title opcity_out">Ghibli <span>| 당신의 마음을 움직일 단 하나의 퍼포먼스</span></p>
+        </div>
+
+
+        <div class="box box8">
+            <div id="box8_top" class="box8_top">
+                <div id="box8_box1" class="box8_box">
+
+                    <ul id="foot_menu1" class="foot_menu">
+                        <li><a href="sub.html">모델</a><span></span>
+                            <ul id="foot_sub1" class="foot_sub">
+                                <li><a href="sub.html">Ghibli</a></li>
+                                <li><a href="sub.html">Levante</a></li>
+                                <li><a href="sub.html">Quattroporte</a></li>
+                                <li><a href="sub.html">MC20</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="foot_menu2" class="foot_menu">
+                        <li><a href="sub.html">마세라티</a><span></span>
+                            <ul id="foot_sub2" class="foot_sub">
+                                <li><a href="sub.html">브랜드 소개</a></li>
+                                <li><a href="sub.html">콘셉트카</a></li>
+                                <li><a href="sub.html">모터쇼</a></li>
+                                <li><a href="sub.html">로드트립</a></li>
+                                <li><a href="sub.html">마세라티X골프</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="box8_box2" class="box8_box">
+                    <ul id="foot_menu1" class="foot_menu">
+                        <li><a href="sub.html">구매</a><span></span>
+                            <ul id="foot_sub1" class="foot_sub">
+                                <li><a href="sub.html">구매 프로그램</a></li>
+                                <li><a href="sub.html">전기차 구매가이드</a></li>
+                                <li><a href="sub.html">마세라티 스펙트럼</a></li>
+                                <li><a href="sub.html">견적내기</a></li>
+                                <li><a href="sub.html">구매 상담 신청</a></li>
+                                <li><a href="sub.html">사양 조회하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="foot_menu2" class="foot_menu">
+                        <li><a href="sub.html">고객센터</a><span></span>
+                            <ul id="foot_sub2" class="foot_sub">
+                                <li><a href="sub.html">고객센터 안내</a></li>
+                                <li><a href="sub.html">공지사항</a></li>
+                                <li><a href="sub.html">이벤트</a></li>
+                                <li><a href="sub.html">자주 묻는 질문</a></li>
+                                <li><a href="sub.html">다운로드 센터</a></li>
+                                <li><a href="sub.html">PR 센터</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="box8_box3" class="box8_box">
+                    <ul id="foot_menu1" class="foot_menu">
+                        <li><a href="sub.html">체험</a><span class=""></span>
+                            <ul id="foot_sub1" class="foot_sub">
+                                <li><a href="sub.html">스페이스</a></li>
+                                <li><a href="sub.html">시승 신청</a></li>
+                                <li><a href="sub.html">전시장 찾기</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="foot_menu2" class="foot_menu">
+                        <li><a href="sub.html">마이페이지</a><span></span>
+                            <ul id="foot_sub2" class="foot_sub">
+                                <li><a href="sub.html">로그인</a></li>
+                                <li><a href="sub.html">회원가입</a></li>
+                                <li><a href="sub.html">내 정보 찾기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="box8_box4" class="box8_box">
+                    <ul id="foot_menu1" class="foot_menu">
+                        <li><a href="sub.html">멤버스</a><span></span>
+                            <ul id="foot_sub1" class="foot_sub">
+                                <li><a href="sub.html">마세라티 멤버쉽</a></li>
+                                <li><a href="sub.html">마세라티 커넥티트 서비스</a></li>
+                                <li><a href="sub.html">디지털 서비스</a></li>
+                                <li><a href="sub.html">차량관리 서비스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="box8_bottom" class="box8_bottom">
+                <img src="img/main/box8/logo.png" alt="logo_8">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

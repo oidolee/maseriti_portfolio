@@ -1,0 +1,897 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif KR', serif;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.appear{
+  display: block;
+}
+.disappear{
+  display: none;
+}
+.opcity_on{
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.opcity_out{
+  opacity: 0;
+  transition: all 3s ease-in-out;
+}
+/* --------------------.header 구역------ */
+header{
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  transition: all 1s ease-in-out;
+}
+  header h1{
+    width: 150px;
+    height: 100px;
+  }
+    .logo{
+     width: 100%;
+      background-size: cover;
+      background-position: center center;
+      z-index: 100;
+    }
+        .logo>img{
+          width: 100%;
+        }
+    nav{
+      width: 85%;
+      height: 50px;
+    }
+      .menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+        .menu>li{
+          width: 100%;
+          height: 50px;
+          padding-bottom: 0px;
+          text-align: center;
+          line-height: 50px;
+        }
+        .menu>li:hover{
+        height: 350px;
+        border-bottom: 3px solid #f3f3f3;
+        padding-bottom: 5px;
+        transition: 0.5s;
+        background-color: #3d3d3d;
+        }
+          .menu>li>a{
+            font-size: 1.3em;
+            color:#f3f3f3;
+          }
+          .menu>li:hover>a{
+            color:#f3f3f3;
+            transition: all 0.5s ease-in-out;
+          }
+            .sub{
+              display: none;
+            }
+            .sub li{
+              min-height: 30px;
+              margin-top: 15px;
+            }
+            .sub li:hover a{
+              color: #bb8630;
+              border-bottom: 1px solid #f3f3f3;
+              transition: all 0.5s  ease-in-out;
+            }
+            .sub a{
+              color: #f3f3f3;
+              cursor: pointer;
+              transition: all 0.5s  ease-in-out;
+            }
+      header p{
+        display:none; /*메뉴아이콘*/
+        color: #f3f3f3;
+        font-size: 3em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+      }
+          .header_bg{
+            position: fixed;
+            width: 95%;
+            height: 600px;
+            background-color: #000000;
+            z-index: 1;
+            display: none;
+          }
+          .header_bgcolor{
+            background-color: #000000;
+            transition: all 0.5s ease-in-out;
+          }
+/* ------------------------------.box 구역------ */
+.box {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+        .slider_box{
+        height: 100%;
+        height: 100%;
+        position: relative;
+        }
+              .slide{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center center;
+                position: absolute;
+              }
+              .slide:not(:first-child){
+                display: none;
+              }
+                  .slide p{
+                    position: absolute;
+                    padding-left: 30px;
+                    top: 90%;
+                    left: 0;
+                    font-size: 4em;
+                    color: #f3f3f3;
+                  }
+                  .slide span{
+                    font-size: 0.5em;
+                  }
+              .check_box{
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+              }
+                  .check_box .check_slide{
+                    width: 35px;
+                    height: 10px;
+                    background-color: #f3f3f3;
+                    border-radius: 10px;
+                    margin-left: 10px;
+                    opacity: 0.5;
+                    cursor: pointer;
+                  }
+                  .check_box .checkEffect{
+                    background-color: #a83c3c;
+                  }
+
+                  .check_box li:hover{
+                    opacity: 1;
+                  }
+                    .moveArrow{
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      color: #f3f3f3;
+                      font-size: 5rem;
+                      opacity: 0.5;
+                    }
+                      .moveArrow:hover{
+                        color: #a83c3c;
+                      } 
+                    .prev{
+                      width: 50px;
+                      height: 70px;
+                      left: 5%;
+                      cursor: pointer;
+                    }
+                    .next{
+                      width: 50px;
+                      height: 70px;
+                      left: 95%;
+                      cursor: pointer;
+                    }
+                  .box1>.move_arrow{
+                    color: #f3f3f3;
+                    position: absolute;
+                    top: 95%;
+                    left: 50.4%;
+                    transform: translate(-50%,-50%);
+                    animation-name: move_arrow;
+                    animation-duration :2s;
+                    animation-delay:0.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count:infinite;
+                    cursor: pointer;
+                  }
+                  .move_arrow img{
+                    width: 18px;
+                  }
+                  .box1>.controlBox{
+                    width: 100px;
+                    height: 30px;
+                    position: absolute;
+                    top: 90%;
+                    left: 50%;
+                    transform: translate(80%,-50%);
+                    display: flex;
+                    justify-content: center;
+                  }        
+                    .controlBox>.sliderControl{
+                      width: 40px;
+                      height: 50px;
+                      text-align: center;
+                    }
+                      .sliderControl>*{
+                        color: #3d3d3d;
+                        font-size: 2em;
+                       cursor: pointer;
+                      }
+                      .sliderControl>*:hover{
+                        color: #f3f3f3;
+                        transition: 0.3s ease-in-out;
+                      }
+                  @keyframes move_arrow{
+                    0%{top:95%}
+                    50%{top:96%}
+                    100%{top:95%}
+                  }
+/* --------box1 사진 및 구역------- */
+.sli_1{
+  background-image: url('../img/main/slider/ghibli.jpg');
+}
+.sli_2{
+  background-image: url('../img/main/slider/levante.jpg');
+}
+.sli_3{
+  background-image: url('../img/main/slider/mc20.jpg');
+}
+/* --------box1 사진 및 구역------- */
+ /* ------.box2 start-----    */
+ .box2{
+  font-size: 1.2rem;
+}
+  .box2>.box2_top{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+.box2>.box2_bottom{
+  width: 100%;
+  height: 85%;
+  padding:  0 3%;
+  box-sizing: border-box;
+  display: flex;
+}
+  .version_left{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .version_left::after{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 100%;
+    background: transparent url("../img/main/box2/box2_arrow.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 90%;
+  }
+    .version_left>h3{
+      margin-bottom: 25%;
+    }
+    .version_left>span {
+      font-size: 1.2em;
+      cursor: pointer;
+      margin: 50px;
+    }
+      .version_left span:hover {
+        color: #a83c3c;
+        font-size: 1.2em;
+        transition: 0.5s;
+      }
+        .select_box>li{
+          opacity: 0.5;
+          height: 50px;
+          line-height: 50px;
+          cursor: pointer;
+        }
+        .select_box .version_effect{
+          font-size: 1.5em;
+          color: #3d3d3d;
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+          vertical-align: middle;
+        }
+  .version_right{
+    width: 70%;
+    height: 100%;
+  }
+    .version_box{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+      .version_box>li{
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .version_box>li:not(:first-of-type){
+        display: none;
+      }
+      .myversion{
+        width: 100%;
+        height: 100%;
+      }
+        .version_top{
+          width: 100%;
+          height: 10%;
+        }
+          .version_top h1 {
+            text-align: center;
+          }
+        .version_middle{
+          width: 100%;
+          height: 60%;
+          position: relative;
+        }
+          .version_img{
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+              /* -- box2 images start-- */
+          .version_img0{
+            background-image: url("../img/main/box2/car0.jpg");
+          }
+          .version_img1{
+            background-image: url("../img/main/box2/car1.jpg");
+          }
+          .version_img2{
+            background-image: url("../img/main/box2/car2.jpg");
+          }
+          .version_img3{
+            background-image: url("../img/main/box2/car3.jpg");
+          }
+          /* -- box2 images end-- */
+        .version_bottom{
+          width: 100%;
+          height: 35%;
+          display: flex;
+          margin-top: 100px;
+        }
+          .car_specifics{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+          }
+          .car_specifics:hover{
+            background-color: #f3f3f3;
+          }
+            .car_specifics>a{
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+              .car_specifics img{
+                width: 45%;
+                margin: 0 auto;
+                display: block;
+              }
+ /* ---------------------------.box2 end----- */              
+/* --------box3 사진 및 구역------- */
+.box3{
+  position: relative;
+  background-color: #000000;
+}
+.box3_top{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+    .box3_top p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 4em;
+      color: #F3F3F3;
+      text-align: center;
+      /* display: none; */
+    }
+    .box3_top p:last-child{
+      top: 75%;
+      font-size: 1.5em;
+      /* display: none; */
+    }
+        .box3 ul{
+          height: 185px;
+        }
+    .box3_bottom{
+      width: 100%;
+      height: 50%;
+    }
+        .box3 .slideWrap{
+          max-width: 1200px;
+          width: 90%;
+          height: 185px;
+          margin: 0 auto;
+        }
+    /* --bx슬라이더 박스 안에 사진 효과 시작*/
+        .box3_p_effect{
+          margin-top: 1%;
+          color: #f3f3f3;
+          transition: all 1s ease-in-out;
+        }
+        .box3_change{
+          margin-top: -5%;
+          color: #a83c3c;
+          transition: all 1s ease-in-out;
+          font-size: 1.1em;
+          font-weight: bold;
+        } 
+              .box_info{
+                margin-top: 1%;
+                height: 30px;
+                color: #f3f3f3;
+                border: 1px solid #f3f3f3;
+                line-height: 25px;
+                transition: all 2s ease-in-out;
+
+              }
+              .box_info_change{
+                margin-top: 1%;
+                height: 30px;
+                color: #3d3d3d;
+                border: 1px solid #f3f3f3;
+                background-color:#f3f3f3;
+                line-height: 25px;
+                transition: all 1s ease-in-out;
+              }
+.box3 .bx-wrapper{
+  border-color: #000000;
+  box-shadow: 0 0 0 #000000;
+  background-color: #000000;
+  height: 190px;
+}
+.box3 .bx-viewport{
+  height: 190px;
+}
+    /* --bx슬라이더 박스 안에 사진 효과 끝 */
+/* ---------------------bxslider 기존값 변경 시작*/
+.box3 .bx-wrapper .bx-controls-direction{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.box3 .controls_slider li{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.box3 .controls_slider li img{
+  /* width: 100%; */
+  height: auto;
+}
+.box3 .bx-prev{
+  position: absolute;
+  left: 0%;
+}
+/* --------------------- .bo3  및 bxslider 기존값 변경 끝*/
+/* -------------------------------box4  시작----- */
+.box4 {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+    .box4_top{
+      width: 100%;
+      height: 35%;
+      color: #f3f3f3;
+      text-align: center;
+    }
+        .box4_top p{
+          font-size: 1.5em;
+        }
+    .box4_bottom{
+      width: 100%;
+      height: 63%;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      flex-direction: column;
+    }
+        .box4_box{
+          width: 30%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          transition: all 1s ease-in-out;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        
+        }
+            .box4_box:hover{
+              transform: scale(1.05);
+              transition: all 0.5s ease-in-out;
+            }
+            .box4_img1{
+              opacity: 1;
+              transition: all 1s ease-in-out;
+            }
+            .box4_img2{
+              left: 35%;
+              opacity: 1;
+              transition: all 1s ease-in-out;
+            }
+
+            .box4_img3{
+              left: 70%;
+              opacity: 1;
+              transition: all 1s ease-in-out;
+            }
+            
+            
+            .box4_img1{
+              background-image: url('../img/main/box4/box4_1.jpg');
+            }
+
+            .box4_img2{
+              background-image: url('../img/main/box4/box4_2.jpg');
+            }
+
+            .box4_img3{
+              background-image: url('../img/main/box4/box4_3.jpg');
+            }
+          
+
+        .box4_box_bg{
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+
+            .box4_iconbox{
+              width: 70px;
+              height: 70px;;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+              text-align: center;
+              color: #f3f3f3;
+              display: none;
+            }
+            .box4_iconbox img{
+             width: 35px;
+             height: 35px;
+            }
+/* -----.box5 start-----    */
+.box5 {
+  background-color:#000000;
+  position: relative;
+  color: #ffffff;
+  padding: 10%;
+  box-sizing: border-box;
+  display: flex;
+}
+  .box5>.box5_box{
+    width: 500px;
+    height: 500px;
+    display: none;
+    margin: 0 auto;
+  }
+      iframe{
+        border: 0;
+        width: 500px;
+        height: 500px;
+      }
+  .box5>.box5_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 10%;
+    box-sizing: border-box;
+  }
+    .box5_info>h1{
+      margin-bottom: 50px;
+      text-align: center;
+    }
+/* ---------------------------.box5 end-----    */
+/* -----.box6 start-----    */
+  .box6_top{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+      .box6_top h1{
+        margin-bottom: 10px;
+      }
+  .box6_bottom{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    position: relative;
+    transition: all 3s ease-in-out;
+  }
+      .box6_standard{
+        width: 26%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0 10px;
+        transition: all 3s ease-in-out;
+        opacity: 0;
+      }
+      .box6_list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all 3s ease-in-out;
+      }
+        .box6_list h2{
+          display: none;
+        }
+      .box6_list h3{
+        font-size: 1.1em;
+      }
+
+      .box6_list h5,.box6_list p{
+        font-weight: bold;
+        font-size: 0.6em;
+      }
+
+        .box6_imgbox{
+          max-width: 500px;
+        }
+          
+            .box6_imgbox>img{
+              max-width: 100%;
+            }
+            .box6_list p::after{
+              content: "";
+              display: block;
+              width: 40px;
+              border-bottom:3px solid red;
+              opacity: 0;
+            }
+            .box6_list:hover p::after{
+              content: "";
+              display: block;
+              border-bottom:3px solid red;
+              opacity: 1;
+              animation-name: move_border;
+              animation-duration: 2s;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+            }
+            @keyframes move_border {
+              0%{width: 0;}
+              50%{width: 40px;}
+              100%{width: 0;}
+            }
+            .box6_effet{
+              position: absolute;
+              right: 5%;
+              transition: all 3s ease-in-out;
+            }
+            .box6_move0{
+              position: absolute;
+              right: 64%;
+              transition: all 3s ease-in-out;
+              opacity: 1;
+            }
+            .box6_move1{
+              position: absolute;
+              right: 36%;
+              transition: all 3s ease-in-out;
+              opacity: 1;
+            }
+            .box6_move2{
+              position: absolute;
+              right: 8%;
+              transition: all 3s ease-in-out;
+              opacity: 1;
+            }
+/* ----------------------------------.box6_list안에 전체 내용적용*/
+ /* ---------------------------.box6 end-----    */
+ /* ----.box7 start------ */
+.box7 ul{
+  width: 100%;
+  height: 100%;
+}
+.box7 li{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+.box7{
+  position: relative;
+}
+    .box7_1{
+      background-image: url('../img/main/box7/ghibli_ori.png');
+    }
+    .box7_2{
+      background-image: url('../img/main/box7/ghibli_lighit.png');
+      position: absolute;
+      top: 0;
+    }
+      .start_engine{
+        position: absolute;
+        top: 85%;
+        right: 5%;
+        cursor: none;
+      }
+      .start_engine img:last-child{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+      }
+      .finger{
+        position: absolute;
+        top: 90%;
+        right: 5%;
+        opacity: 0;
+        transition: all 0.1s ease-in-out;
+        cursor: none;
+      }
+      .finger_pop{
+        opacity: 1;
+        transition: all 1s ease-in-out;
+        cursor: none;
+      }
+          .box7_title{
+            position: absolute;
+            top: 10%;
+            left: 0;
+            color:#f3f3f3;
+            font-size: 4em;
+            transition: all 1.2s ease-in-out;
+          }
+              .box7 span{
+                font-size: 0.4em;
+              }
+              .box7:hover .box2_title{
+                opacity: 1;
+                transition: all 1s ease-in-out;
+              }
+ /* ---------------------------.box7 end-----    */
+.bg_color{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.7;
+  top:0%;
+  left: 0%;
+}
+/* --------.box8 start */
+.box8 {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Noto Serif KR', serif
+}
+  .box8>.box8_top{
+    width: 100%;
+    height: 80%;
+    background-color:#000000;
+    box-sizing: border-box;
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+    .box8_top>.box8_box{
+      width: 20%;
+      height: 100%;
+      background-color:#000000;
+      display: flex;
+      flex-direction: column;
+    }
+      .box8_box>ul{
+        width: 100%;
+        height: 50%;
+      }
+        .box8_box>ul>li{
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+        }
+         
+          .box8_box>ul>li>a{
+            width: 100%;
+            color: #ffffff;
+            font-size: 1.2em;
+            font-family: 'Noto Serif KR', serif
+          }
+              .box8_box>ul>li>ul>li{
+                margin-top: 10px;
+                width: 100%;
+                height: 20px;
+              }
+              .box8_box>ul>li>ul>li>a{
+                color: #ffffff;
+                font-size: 0.8em;
+                font-family: 'Noto Serif KR', serif
+              }
+              .box8_box>ul>li>ul>li>a:hover{
+                color: #bb8630;
+                transition: 1s;
+              }
+      .box8_box>ul:last-child{
+        margin-top: 50px;
+      }
+  .box8>.box8_bottom{
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: #000000;
+    z-index: 1;
+  } 
+    .box8_bottom>img{
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
+/* -------------------------------------.box8 end */
